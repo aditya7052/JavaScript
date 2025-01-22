@@ -1,3 +1,5 @@
+// git remote add origin https://github.com/aditya7052/JavaScript.git
+
 const insert = document.getElementById('insert')
 
 window.addEventListener('keydown',(e)=>{
