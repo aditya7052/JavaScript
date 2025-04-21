@@ -9,15 +9,14 @@ function one(){
 }
 // one();
 
+
 if(true){
     const username ="Aditya"
     if(username == "Aditya"){
         const website = " youtube"
         // console.log (username + website);
-
     }
     // console.log(website);
-
 }
 // console.log(username);
 

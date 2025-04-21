@@ -4,25 +4,25 @@ const user = {
 
     welcomeMessage: function (){
         console.log(`${this.username} , Welcome to website!`)
-        // console.log(this)
+        // console.log(this)  // --> this, will print user(object)
     }
 
 }
 // user.welcomeMessage()
 // user.username = "Kumar"
 // user.welcomeMessage()
-// console.log(this)
+// console.log(this)   //--> empty object
 
 // function chai(){
 //     let username = "Aditya"
-//     console.log(this.username);
+//     console.log(this.username);  //undefined
 // }
 
 const chai = () =>{
     let username = "Aditya"
-    console.log(this);
+    // console.log(this);  // empty object 
 }
-chai()
+// chai()
 
 //--> Arrow function
 // const addTwo = (num1, num2)=> {
@@ -31,11 +31,11 @@ chai()
 
 
 //--> implicit return 
-// const addTwo = (num1, num2)=>  num1+ num2
+// const addTwo = (num1, num2)=>  num1+ num2  // no curly braces
 // const addTwo = (num1, num2)=>  (num1+ num2)
 
 const addTwo = (num1, num2)=>  ({username: "Aditya"})
 
-// console.log(addTwo(3,4))
+console.log(addTwo(3,4))
 
 

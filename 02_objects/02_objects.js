@@ -7,12 +7,12 @@ const mySym = Symbol("key1")
 
 
 const JsUser = {
-    name: "Hitesh",
-    "full name": "Hitesh Choudhary",
+    name: "Aditya",
+    "full name": "Aditya Kumar",
     [mySym]: "mykey1",
-    age: 18,
-    location: "Jaipur",
-    email: "hitesh@google.com",
+    age: 24,
+    location: "Sasaram",
+    email: "aditya@google.com",
     isLoggedIn: false,
     lastLoginDays: ["Monday", "Saturday"]
 }
@@ -20,17 +20,17 @@ const JsUser = {
 // console.log(JsUser.email)
 // console.log(JsUser["email"])
 // console.log(JsUser["full name"])
-// console.log(JsUser[mySym])
+// console.log(JsUser[mySym])   // mykey1
 
-JsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
-JsUser.email = "hitesh@microsoft.com"
+JsUser.email = "aditya@chatgpt.com"
+Object.freeze(JsUser)  //--> 
+JsUser.email = "aditya@microsoft.com"
 // console.log(JsUser);
 
-JsUser.greeting = function(){
+JsUser.greeting = function () {
     // console.log("Hello JS user");
 }
-JsUser.greetingTwo = function(){
+JsUser.greetingTwo = function () {
     // console.log(`Hello JS user, ${this.name}`);
 }
 
@@ -42,51 +42,51 @@ JsUser.greetingTwo = function(){
 
 
 // const tinderUser = new Object;  //singlton
-const tinderUser ={}
+const tinderUser = {}
 
-tinderUser.id= "abc123"
-tinderUser.name="Aditya"
+tinderUser.id = "abc123"
+tinderUser.name = "Aditya"
 tinderUser.isLoggedIn = false;
 // console.log(tinderUser);
 
 
 const regularUser = {
     email: "some@gmail.com",
-    fullname:{
-        userfullname :{
+    fullname: {
+        userfullname: {
             firstname: "Aditya",
-            lastname :"Choudhary"
+            lastname: "Kumar"
         }
     }
 }
 // console.log(regularUser.fullname.userfullname.firstname);
 
 
-const obj1 ={1: "a", 2:"b"}
-const obj2 ={3: "a", 4:"b"}
-const obj4 ={5: "a", 6:"b"}
+const obj1 = { 1: "a", 2: "b" }
+const obj2 = { 3: "a", 4: "b" }
+const obj4 = { 5: "a", 6: "b" }
 
 // const obj3 = {obj1, obj2}  //wrong
 const obj3 = Object.assign({}, obj1, obj2, obj4);
 // console.log(obj3)
 
 // another way
-const obj5 ={...obj1, ...obj2,...obj4}
+const obj5 = { ...obj1, ...obj2, ...obj4 }
 // console.log(obj5);
 
 
 const users = [
     {
         email: "aditya@gmail.com",
-        name : "aditya"
+        name: "aditya"
     },
     {
         email: "aditya@gmail.com",
-        name : "aditya"
+        name: "aditya"
     },
     {
         email: "aditya@gmail.com",
-        name : "aditya"
+        name: "aditya"
     }
 ]
 
@@ -102,13 +102,13 @@ users[1].email
 
 //Destructure of objects
 const course = {
-    coursename : "js in hindi",
-    price : 999,
+    coursename: "js in hindi",
+    price: 999,
     courseInstructor: "Aditya"
 }
 
-const {courseInstructor } = course
-// console.log(courseInstructor)
-const {courseInstructor : instructor} = course  //changing courseInstructor to instructor
-// console.log(instructor)
+const { courseInstructor } = course
+console.log(courseInstructor)
+const { courseInstructor: instructor } = course  //changing courseInstructor to instructor
+console.log(instructor)
 
