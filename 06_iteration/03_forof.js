@@ -17,8 +17,9 @@ map.set('IN', "INDIA")
 map.set('USA', "UNITED STATES OF AMERICA")
 map.set('FR', "FRANCE")
 map.set('FR', "FRANCE")
-/*    console.log(map);
-    //In array form
+    // console.log(map);
+
+/*In array form
 Map(3) {
   'IN' => 'INDIA',
   'USA' => 'UNITED STATES OF AMERICA',
@@ -28,7 +29,7 @@ Map(3) {
 
  //Without array form
 for(const [key, value] of map){
-    //console.log(key, ':-', value);
+    // console.log(key, ':-', value);
 }
 
 const myObj = {
